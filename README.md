@@ -31,7 +31,7 @@ http://localhost:8080
 
 ## Endpoint
 
-### `POST /ask`
+### `POST /ask` (http://localhost:8080/ask)
 
 **Request**
 
