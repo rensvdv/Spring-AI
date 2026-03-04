@@ -2,32 +2,32 @@ package com.vh.cognitive.processor.controllers;
 
 import com.vh.cognitive.processor.model.Request;
 import com.vh.cognitive.processor.model.Response;
-import org.springframework.ai.chat.client.ChatClient;
+import com.vh.cognitive.processor.services.ChatService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ChatController {
 
-    private final ChatClient chatClient;
+    private final ChatService chatService;
 
-    public ChatController(ChatClient.Builder chatClientBuilder) {
-        this.chatClient = chatClientBuilder.build();
+    public ChatController(ChatService chatService) {
+        this.chatService = chatService;
     }
 
     @PostMapping("/ask")
     public Response ask(@RequestBody Request request) {
+
         long start = System.currentTimeMillis();
 
-        String answer = this.chatClient.prompt()
-                .user(request.getMessage())
-                .call()
-                .content();
+        String answer = chatService.ask(request.getConversationId(), request.getMessage());
 
         long end = System.currentTimeMillis();
-        long latency = end - start; 
 
-        Response response = new Response(answer, latency, end);
-        return response;
+        return new Response(
+                answer,
+                end - start,
+                end
+        );
     }
 
 }
