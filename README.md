@@ -37,7 +37,8 @@ http://localhost:8080
 
 ```json
 {
-  "message": "Wat is AI?"
+  "conversationId": "123"
+  "message": "I see a person looking at me and smiling"
 }
 ```
 
@@ -45,7 +46,7 @@ http://localhost:8080
 
 ```json
 {
-  "message": "AI is ...",
+  "message": "I think: ... I do: ... I say: ...",
   "latency": 120,
   "timestamp": 1710000000000
 }
