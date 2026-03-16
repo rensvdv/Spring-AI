@@ -6,3 +6,5 @@ spring:
       base-url: http://localhost:11434
       chat:
         model: adam
+server:
+  port: 8081
