@@ -4,8 +4,10 @@ WORKDIR /app
 COPY . .
 
 RUN mvn clean package -DskipTests && \
-    cp target/*.jar app.jar
+cp target/*.jar app.jar
 
 EXPOSE 8081
+  
+ENV SPRING_PROFILES_ACTIVE=docker
 
 CMD ["java","-jar","app.jar"]
