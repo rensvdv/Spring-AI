@@ -30,4 +30,9 @@ public class ChatController {
         );
     }
 
+    @PostMapping("/echo")
+    public String echo(@RequestBody Request request){
+        System.out.println(request.getMessage());
+        return request.getMessage();
+    }
 }

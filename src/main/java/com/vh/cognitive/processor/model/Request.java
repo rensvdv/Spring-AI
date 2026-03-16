@@ -1,5 +1,6 @@
 package com.vh.cognitive.processor.model;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
