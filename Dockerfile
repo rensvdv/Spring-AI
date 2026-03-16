@@ -1,9 +1,11 @@
-FROM eclipse-temurin:21-jdk-jammy
+FROM maven:3.9.9-eclipse-temurin-17
 
 WORKDIR /app
+COPY . .
 
-COPY target/cognitive.processor-0.0.1-SNAPSHOT.jar app.jar
+RUN mvn clean package -DskipTests && \
+    cp target/*.jar app.jar
 
-EXPOSE 8081:8081
+EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+CMD ["java","-jar","app.jar"]
