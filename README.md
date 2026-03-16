@@ -51,7 +51,7 @@ mvn spring-boot:run
 Applicatie draait standaard op:
 
 ```
-http://localhost:8080
+http://localhost:8081
 ```
 
 ---
