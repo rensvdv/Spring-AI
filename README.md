@@ -80,3 +80,19 @@ http://localhost:8080
 ```
 
 De response bevat het modelantwoord, de verwerkingstijd (ms) en een timestamp.
+
+
+### `POST /echo` (http://localhost:8080/ask)
+
+**Request**
+
+```json
+{
+  "message": "Hello!"
+}
+```
+
+**Response**
+
+String: Hello!
+
