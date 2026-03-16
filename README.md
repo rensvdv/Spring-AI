@@ -82,7 +82,7 @@ http://localhost:8080
 De response bevat het modelantwoord, de verwerkingstijd (ms) en een timestamp.
 
 
-### `POST /echo` (http://localhost:8080/ask)
+### `POST /echo` (http://localhost:8080/echo)
 
 **Request**
 
