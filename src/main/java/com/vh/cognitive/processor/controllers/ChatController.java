@@ -1,5 +1,6 @@
 package com.vh.cognitive.processor.controllers;
 
+import com.vh.cognitive.processor.model.Echo;
 import com.vh.cognitive.processor.model.Request;
 import com.vh.cognitive.processor.model.Response;
 import com.vh.cognitive.processor.services.ChatService;
@@ -31,8 +32,8 @@ public class ChatController {
     }
 
     @PostMapping("/echo")
-    public String echo(@RequestBody Request request){
-        System.out.println(request.getMessage());
-        return request.getMessage();
+    public String echo(@RequestBody Echo echo){
+        System.out.println(echo.getMessage());
+        return echo.getMessage();
     }
 }
