@@ -58,7 +58,7 @@ http://localhost:8080
 
 ## Endpoint
 
-### `POST /ask` (http://localhost:8080/ask)
+### `POST /ask` (http://localhost:8081/ask)
 
 **Request**
 
@@ -82,7 +82,7 @@ http://localhost:8080
 De response bevat het modelantwoord, de verwerkingstijd (ms) en een timestamp.
 
 
-### `POST /echo` (http://localhost:8080/echo)
+### `POST /echo` (http://localhost:8081/echo)
 
 **Request**
 
@@ -96,3 +96,9 @@ De response bevat het modelantwoord, de verwerkingstijd (ms) en een timestamp.
 
 String: Hello!
 
+
+## Docker image
+De docker image versie werkt alleen met de docker image versie van ollama. Deze is hier te installeren: https://github.com/mythrantic/ollama-docker. 
+Om het te testen werkt het nu alleen met het model: llama3.2:1b. Deze is nodig om localhost:8081/ask aan te roepen.
+
+---
